@@ -1,0 +1,15 @@
+{
+  "name": "UA",
+  "symbol": "UA",
+  "decimals": 9,
+  "description": "The official support token of Ukraine in the Volya.io ecosystem. Designed for trading, rewards, referral bonuses, and DeFi integrations.",
+  "image": "https://i.ibb.co/mVJ9nYpF/ua-token.webp",
+  "tags": ["utility-token", "support", "ukraine"],
+  "extensions": {
+    "website": "https://volya.io",
+    "twitter": "https://x.com/volya089",
+    "telegram": "https://t.me/VolyaUkraineOfficial",
+    "discord": "https://discord.gg/volyaukraine",
+    "explorer": "https://solscan.io/token/98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7"
+  }
+}
