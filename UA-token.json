@@ -1,15 +1,172 @@
 {
-  "name": "UA",
+  "chainId": 101,
+  "address": "98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7",
   "symbol": "UA",
+  "name": "UA Token",
   "decimals": 9,
-  "description": "The official support token of Ukraine in the Volya.io ecosystem. Designed for trading, rewards, referral bonuses, and DeFi integrations.",
-  "image": "https://i.ibb.co/mVJ9nYpF/ua-token.webp",
-  "tags": ["utility-token", "support", "ukraine"],
+  "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7/logo.png",
+  "tags": ["utility-token", "support", "ukraine", "defi", "nft", "governance", "gaming"],
   "extensions": {
+    "description": "The official support token of Ukraine in the Volya.io ecosystem. UA is designed for trading, DeFi integrations, NFT utilities, referral rewards, community growth, and future blockchain research.",
     "website": "https://volya.io",
     "twitter": "https://x.com/volya089",
     "telegram": "https://t.me/VolyaUkraineOfficial",
     "discord": "https://discord.gg/volyaukraine",
-    "explorer": "https://solscan.io/token/98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7"
+    "github": "https://github.com/volya-ukraine",
+    "explorer": "https://solscan.io/token/98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7",
+
+    "whitepaper": "https://volya.io/ua-whitepaper.pdf",
+    "roadmap": "https://volya.io/ua-roadmap",
+
+    "tokenomics": {
+      "supplyModel": "fixed-cap",
+      "totalSupply": 10000000,
+      "decimals": 9,
+      "circulatingSupplyNote": "Dynamic; depends on liquidity provisioning and vested releases.",
+      "initialLiquidityNote": "Active Orca pools (UA/SOL, UA/USDT).",
+      "allocationPlan": [
+        {"category": "Liquidity & Market Making", "percent": 35},
+        {"category": "Community Rewards & Airdrops", "percent": 25},
+        {"category": "Ecosystem & Partnerships", "percent": 15},
+        {"category": "Treasury & Operations", "percent": 15},
+        {"category": "Team (Vesting)", "percent": 10}
+      ],
+      "vesting": {
+        "teamCliffMonths": 6,
+        "teamVestingMonths": 18,
+        "ecosystemLinearMonths": 24
+      }
+    },
+
+    "markets": {
+      "dex": [
+        {"name": "Orca", "pair": "UA/SOL", "url": "https://www.orca.so"},
+        {"name": "Orca", "pair": "UA/USDT", "url": "https://www.orca.so"},
+        {"name": "Jupiter", "pair": "Router", "url": "https://jup.ag"}
+      ]
+    },
+
+    "staking": {
+      "enabled": true,
+      "contract": "TBD",
+      "rewardAsset": "UA",
+      "compounding": true,
+      "earlyUnstakePenaltyPercent": 2,
+      "tiers": [
+        {"name": "Flex", "lockupDays": 0, "aprTargetPercent": 6},
+        {"name": "Standard", "lockupDays": 30, "aprTargetPercent": 12},
+        {"name": "Premium", "lockupDays": 90, "aprTargetPercent": 20}
+      ],
+      "notes": "APR targets are indicative and may adjust based on treasury yields and protocol usage."
+    },
+
+    "nft": {
+      "support": true,
+      "mintStandard": ["Metaplex"],
+      "useCases": ["access-pass", "loyalty", "airdrops"],
+      "marketplace": "https://volya.io/ua-nft"
+    },
+
+    "governance": {
+      "enabled": true,
+      "model": "token-weighted",
+      "snapshot": "https://snapshot.org/#/volya",
+      "forum": "https://gov.volya.io",
+      "quorumPercent": 10,
+      "proposalThresholdUA": 50000
+    },
+
+    "feesAndBurn": {
+      "transferFee": 0,
+      "buybackAndBurn": {
+        "enabled": true,
+        "triggerRules": [
+          {"condition": "priceDrawdownPercent>=25 over 7d AND liquidityLow", "action": "buyback-burn"},
+          {"condition": "extraordinary-volatility", "action": "throttle-emissions"}
+        ],
+        "maxBurnPercentOfSupply": 10
+      },
+      "crisisBurn": {
+        "enabled": true,
+        "governanceGuardrails": true,
+        "notes": "Anti-crisis burn may be executed via governance if liquidity becomes critically low."
+      }
+    },
+
+    "compliance": {
+      "kycAffectsHolders": false,
+      "jurisdictionNote": "UA is a utility token; holders are responsible for local compliance."
+    },
+
+    "security": {
+      "audits": [
+        {"firm": "TBD", "reportUrl": "https://volya.io/audits/ua.pdf"}
+      ],
+      "bugBounty": "https://volya.io/bug-bounty",
+      "contacts": {"securityEmail": "security@volya.io"}
+    },
+
+    "oracleAndData": {
+      "priceFeeds": ["Jupiter", "Pyth (planned)"],
+      "indexListingsPlanned": ["CoinGecko", "CoinMarketCap"]
+    },
+
+    "bridges": {
+      "multichainPlans": [
+        {"chain": "BSC", "status": "research"},
+        {"chain": "Ethereum", "status": "research"}
+      ],
+      "canonicalChain": "Solana"
+    },
+
+    "futureChainPlan": {
+      "name": "VolyaChain",
+      "status": "research",
+      "consensus": "Proof-of-Stake",
+      "smartContracts": true,
+      "tokenCreationOnVolyaChain": true,
+      "migrationOptIn": true,
+      "halving": {
+        "appliesOnVolyaChainOnly": true,
+        "intervalMonths": 24,
+        "initialEmissionPerBlock": 10,
+        "emissionDecay": "50% per interval",
+        "maxSupply": 21000000,
+        "notes": "UA on Solana remains fixed-supply; halving applies only if/when native VolyaChain launches."
+      }
+    },
+
+    "gaming": {
+      "playToEarn": true,
+      "plannedIntegrations": ["Unity SDK", "Unreal Engine SDK"],
+      "marketplace": "https://volya.io/ua-game-assets",
+      "notes": "UA to be used as in-game currency and reward mechanism in Volya-powered titles."
+    },
+
+    "walletIntegration": {
+      "supportedWallets": ["Phantom", "Solflare", "Rabby", "Ledger"],
+      "mobileSDK": "Planned",
+      "custodialWallet": "Volya Wallet (under development)"
+    },
+
+    "metaverse": {
+      "support": true,
+      "plannedUseCases": ["land-ownership", "avatars", "digital-goods"],
+      "partners": ["VolyaVerse (planned)"]
+    },
+
+    "paymentUseCases": {
+      "donations": true,
+      "merchantIntegration": "Planned",
+      "p2pTransfers": true,
+      "notes": "UA targets community payments, charitable donations, and P2P globally."
+    },
+
+    "developerSupport": {
+      "sdk": "https://volya.io/ua-sdk",
+      "apiDocs": "https://volya.io/api",
+      "tokenFactory": true,
+      "notes": "UA aims to be a base layer for launching other tokens, NFTs, and dApps."
+    }
   }
 }
