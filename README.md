@@ -1,2 +1,2 @@
-# UA-token
-Official repository for UA Token (Solana). Includes smart contract address, logo, metadata, and whitepaper.
+# WLY-token
+Official repository for WLY Coin (Solana). Includes smart contract address, logo, metadata, and whitepaper.

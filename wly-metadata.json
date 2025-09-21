@@ -1,0 +1,10 @@
+{
+    "name": "WLY Coin",
+    "symbol": "WLY",
+    "decimals": 9,
+    "mint": "98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7",
+    "description": "WLY Coin — фіксований токен на мережі Solana з максимальною емісією 10,000,000 WLY, створений для підтримки та розвитку блокчейн проєктів Volya.",
+    "website": "https://volya.io",
+    "twitter": "https://twitter.com/volya089",
+    "telegram": "https://t.me/VolyaUkraineOfficial"
+}

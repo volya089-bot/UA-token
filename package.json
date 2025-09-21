@@ -1,0 +1,23 @@
+{
+  "name": "wly-blockchain-test",
+  "version": "1.0.0",
+  "description": "WLY Blockchain testing and wallet creation tools",
+  "main": "test-wly-chain.js",
+  "scripts": {
+    "test": "node test-wly-chain.js",
+    "create-wallet": "node test-wly-chain.js",
+    "test-chain": "node test-wly-chain.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6"
+  },
+  "keywords": [
+    "wly",
+    "blockchain",
+    "solana",
+    "wallet",
+    "crypto"
+  ],
+  "author": "Volya.io",
+  "license": "MIT"
+}
