@@ -48,7 +48,7 @@
 
     "staking": {
       "enabled": true,
-      "contract": "TBD",
+      "contract": "stakingUA1111111111111111111111111111111111",
       "rewardAsset": "UA",
       "compounding": true,
       "earlyUnstakePenaltyPercent": 2,
@@ -70,6 +70,7 @@
     "governance": {
       "enabled": true,
       "model": "token-weighted",
+      "contract": "govUA11111111111111111111111111111111111",
       "snapshot": "https://snapshot.org/#/volya",
       "forum": "https://gov.volya.io",
       "quorumPercent": 10,

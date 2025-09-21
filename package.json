@@ -1,0 +1,38 @@
+{
+  "name": "ua-token-blockchain",
+  "version": "1.0.0",
+  "description": "UA Token blockchain deployment scripts and utilities",
+  "main": "scripts/deploy.js",
+  "scripts": {
+    "deploy": "node scripts/deploy.js",
+    "deploy:mainnet": "NODE_ENV=production node scripts/deploy.js",
+    "deploy:devnet": "NODE_ENV=development node scripts/deploy.js",
+    "initialize": "node scripts/initialize.js",
+    "test": "mocha tests/**/*.js",
+    "build": "anchor build",
+    "build:verify": "anchor build --verifiable",
+    "validate": "node scripts/validate.js"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/spl-token": "^0.3.8",
+    "@solana/web3.js": "^1.87.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.0.3",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2"
+  },
+  "keywords": [
+    "solana",
+    "blockchain",
+    "ua-token",
+    "defi",
+    "ukraine"
+  ],
+  "author": "Volya Ukraine",
+  "license": "MIT"
+}
