@@ -162,6 +162,18 @@
       "notes": "UA targets community payments, charitable donations, and P2P globally."
     },
 
+    "partnerships": {
+      "strategicTokens": [
+        {
+          "symbol": "WLY",
+          "name": "WLY Token",
+          "relationship": "ecosystem-partner",
+          "utilities": ["cross-staking", "combined-governance", "liquidity-pairs"],
+          "notes": "WLY Token provides enhanced ecosystem utilities when held alongside UA"
+        }
+      ]
+    },
+
     "developerSupport": {
       "sdk": "https://volya.io/ua-sdk",
       "apiDocs": "https://volya.io/api",

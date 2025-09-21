@@ -1,0 +1,95 @@
+{
+  "chainId": 101,
+  "address": "WLYTokenAddressToBeUpdated",
+  "symbol": "WLY",
+  "name": "WLY Token",
+  "decimals": 9,
+  "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/WLYTokenAddressToBeUpdated/logo.png",
+  "tags": ["utility-token", "partnership", "ukraine", "defi", "governance"],
+  "extensions": {
+    "description": "WLY Token - A strategic partner token in the Volya.io ecosystem, designed for cross-token utilities and enhanced DeFi integrations with UA Token.",
+    "website": "https://volya.io",
+    "twitter": "https://x.com/volya089",
+    "telegram": "https://t.me/VolyaUkraineOfficial",
+    "discord": "https://discord.gg/volyaukraine",
+    "github": "https://github.com/volya-ukraine",
+    "explorer": "https://solscan.io/token/WLYTokenAddressToBeUpdated",
+
+    "partnership": {
+      "withUA": true,
+      "crossTokenUtilities": ["liquidity-pools", "staking-rewards", "governance-voting"],
+      "jointInitiatives": ["charity", "development-fund", "community-growth"]
+    },
+
+    "tokenomics": {
+      "supplyModel": "fixed-cap",
+      "totalSupply": 5000000,
+      "decimals": 9,
+      "circulatingSupplyNote": "Dynamic; coordinated with UA token ecosystem.",
+      "initialLiquidityNote": "Active pools with UA/WLY pairs.",
+      "allocationPlan": [
+        {"category": "Liquidity & Market Making", "percent": 40},
+        {"category": "Community Rewards & Partnerships", "percent": 30},
+        {"category": "Ecosystem Development", "percent": 20},
+        {"category": "Treasury & Operations", "percent": 10}
+      ]
+    },
+
+    "markets": {
+      "dex": [
+        {"name": "Orca", "pair": "WLY/SOL", "url": "https://www.orca.so"},
+        {"name": "Orca", "pair": "WLY/UA", "url": "https://www.orca.so"},
+        {"name": "Jupiter", "pair": "Router", "url": "https://jup.ag"}
+      ]
+    },
+
+    "staking": {
+      "enabled": true,
+      "contract": "TBD",
+      "rewardAsset": "WLY",
+      "crossStaking": {
+        "withUA": true,
+        "bonusMultiplier": 1.2,
+        "notes": "Enhanced rewards when staking both UA and WLY tokens"
+      },
+      "tiers": [
+        {"name": "Basic", "lockupDays": 0, "aprTargetPercent": 8},
+        {"name": "Premium", "lockupDays": 60, "aprTargetPercent": 15},
+        {"name": "Elite", "lockupDays": 180, "aprTargetPercent": 25}
+      ]
+    },
+
+    "governance": {
+      "enabled": true,
+      "model": "token-weighted",
+      "crossGovernance": {
+        "withUA": true,
+        "combinedVotingPower": true,
+        "notes": "WLY holders can participate in UA governance and vice versa"
+      },
+      "proposalThresholdWLY": 25000
+    },
+
+    "compliance": {
+      "kycAffectsHolders": false,
+      "jurisdictionNote": "WLY is a utility token; holders are responsible for local compliance."
+    },
+
+    "security": {
+      "audits": [
+        {"firm": "TBD", "reportUrl": "https://volya.io/audits/wly.pdf"}
+      ],
+      "bugBounty": "https://volya.io/bug-bounty",
+      "contacts": {"securityEmail": "security@volya.io"}
+    },
+
+    "integration": {
+      "uaTokenSynergy": {
+        "liquidityPairs": ["WLY/UA", "WLY/SOL", "WLY/USDT"],
+        "rewardDistribution": "proportional",
+        "governanceWeight": "combined",
+        "stakingBonuses": true
+      }
+    }
+  }
+}
