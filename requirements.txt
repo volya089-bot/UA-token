@@ -1,0 +1,3 @@
+# VolyaChain Dependencies
+# Standard library only - no external dependencies required
+# Python 3.7+ required for type hints

@@ -1,0 +1,46 @@
+{
+  "blockchain": {
+    "name": "VolyaChain",
+    "version": "1.0.0",
+    "consensus": "Proof-of-Stake",
+    "native_token": "UA",
+    "max_supply": 21000000,
+    "initial_supply": 10000000,
+    "block_time_seconds": 30,
+    "halving_interval_months": 24,
+    "initial_emission_per_block": 10.0,
+    "emission_decay": "50% per halving interval"
+  },
+  "consensus": {
+    "type": "PoS",
+    "minimum_stake": 1000,
+    "slashing_enabled": false,
+    "validator_selection": "stake-weighted-random"
+  },
+  "network": {
+    "chain_id": 1337,
+    "default_gas_price": 0.1,
+    "max_block_size": 1000000,
+    "max_transactions_per_block": 1000
+  },
+  "features": {
+    "smart_contracts": true,
+    "nft_support": true,
+    "governance": true,
+    "staking": true,
+    "bridges": true
+  },
+  "migration": {
+    "from_solana": {
+      "enabled": true,
+      "contract_address": "98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7",
+      "migration_ratio": "1:1",
+      "opt_in_required": true
+    }
+  },
+  "governance": {
+    "proposal_threshold": 50000,
+    "quorum_percent": 10,
+    "voting_period_blocks": 40320
+  }
+}
