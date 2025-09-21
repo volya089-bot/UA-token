@@ -25,11 +25,12 @@
       "circulatingSupplyNote": "Dynamic; depends on liquidity provisioning and vested releases.",
       "initialLiquidityNote": "Active Orca pools (UA/SOL, UA/USDT).",
       "allocationPlan": [
-        {"category": "Liquidity & Market Making", "percent": 35},
-        {"category": "Community Rewards & Airdrops", "percent": 25},
+        {"category": "Owner Allocation", "percent": 20},
+        {"category": "Liquidity & Market Making", "percent": 30},
+        {"category": "Community Rewards & Airdrops", "percent": 20},
         {"category": "Ecosystem & Partnerships", "percent": 15},
-        {"category": "Treasury & Operations", "percent": 15},
-        {"category": "Team (Vesting)", "percent": 10}
+        {"category": "Treasury & Operations", "percent": 10},
+        {"category": "Team (Vesting)", "percent": 5}
       ],
       "vesting": {
         "teamCliffMonths": 6,
@@ -62,9 +63,24 @@
 
     "nft": {
       "support": true,
-      "mintStandard": ["Metaplex"],
-      "useCases": ["access-pass", "loyalty", "airdrops"],
-      "marketplace": "https://volya.io/ua-nft"
+      "mintStandard": ["Metaplex", "VC-721", "VC-1155"],
+      "useCases": ["access-pass", "loyalty", "airdrops", "gaming-assets", "collectibles", "utility"],
+      "marketplace": "https://volya.io/ua-nft",
+      "volyaChainFeatures": {
+        "permissionlessCreation": true,
+        "royaltySupport": true,
+        "fractionalOwnership": true,
+        "dynamicMetadata": true,
+        "crossChainCompatibility": true,
+        "bulkMinting": true,
+        "gaslessTransactions": true
+      },
+      "creatorTools": {
+        "noCodeMinting": true,
+        "metadataEditor": true,
+        "collectionManager": true,
+        "whitelistTools": true
+      }
     },
 
     "governance": {
@@ -121,18 +137,74 @@
 
     "futureChainPlan": {
       "name": "VolyaChain",
-      "status": "research",
-      "consensus": "Proof-of-Stake",
-      "smartContracts": true,
-      "tokenCreationOnVolyaChain": true,
-      "migrationOptIn": true,
+      "status": "development",
+      "consensus": "Delegated Proof-of-Stake",
+      "performance": {
+        "tps": 65000,
+        "blockTime": "400ms",
+        "finality": "instant",
+        "notes": "Solana-level performance with Bitcoin security and Ethereum functionality"
+      },
+      "smartContracts": {
+        "enabled": true,
+        "vm": "WebAssembly",
+        "languages": ["Rust", "C++", "AssemblyScript"],
+        "ethereumCompatibility": true,
+        "upgradeable": true
+      },
+      "tokenCreation": {
+        "enabled": true,
+        "standards": ["VC-20", "VC-721", "VC-1155"],
+        "mintingMechanism": "ethereum-style",
+        "permissionless": true,
+        "fees": {
+          "tokenCreation": "100 UA",
+          "nftMinting": "10 UA",
+          "customTokenMinting": "1 UA"
+        }
+      },
       "halving": {
-        "appliesOnVolyaChainOnly": true,
+        "enabled": true,
+        "model": "bitcoin-style",
+        "intervalBlocks": 840000,
         "intervalMonths": 24,
-        "initialEmissionPerBlock": 10,
-        "emissionDecay": "50% per interval",
+        "initialBlockReward": 10,
+        "reductionFactor": 0.5,
         "maxSupply": 21000000,
-        "notes": "UA on Solana remains fixed-supply; halving applies only if/when native VolyaChain launches."
+        "ownerRewardPercent": 20,
+        "notes": "Bitcoin-style halving every ~4 years, with 20% of block rewards going to original owner"
+      },
+      "nftCapabilities": {
+        "standards": ["VC-721", "VC-1155"],
+        "marketplaceIntegrated": true,
+        "royalties": true,
+        "fractionalOwnership": true,
+        "crossChainBridging": true,
+        "metadataStorage": "IPFS"
+      },
+      "multiTokenSupport": {
+        "enabled": true,
+        "createCustomTokens": true,
+        "tokenFactory": true,
+        "governanceTokens": true,
+        "stablecoins": true,
+        "wrappedAssets": true,
+        "crossChainTokens": true
+      },
+      "governance": {
+        "daoFramework": true,
+        "proposalSystem": true,
+        "votingMechanism": "quadratic",
+        "treasuryManagement": true,
+        "upgradableContracts": true
+      },
+      "migrationOptIn": true,
+      "bridging": {
+        "ethereum": true,
+        "solana": true,
+        "bsc": true,
+        "polygon": true,
+        "trustless": true
       }
     },
 
@@ -165,8 +237,28 @@
     "developerSupport": {
       "sdk": "https://volya.io/ua-sdk",
       "apiDocs": "https://volya.io/api",
-      "tokenFactory": true,
-      "notes": "UA aims to be a base layer for launching other tokens, NFTs, and dApps."
+      "tokenFactory": {
+        "enabled": true,
+        "customTokenCreation": true,
+        "nftMinting": true,
+        "smartContractDeployment": true,
+        "templateLibrary": true
+      },
+      "blockchainFeatures": {
+        "bitcoinStyleHalving": true,
+        "solanaSpeedPerformance": true,
+        "ethereumMintingCapabilities": true,
+        "multiTokenSupport": true,
+        "nftCreation": true,
+        "daoFramework": true
+      },
+      "tools": {
+        "walletConnector": true,
+        "blockExplorer": "https://explorer.volyachain.io",
+        "testnet": "https://testnet.volyachain.io",
+        "faucet": "https://faucet.volyachain.io"
+      },
+      "notes": "VolyaChain serves as a comprehensive platform for launching tokens, NFTs, and dApps with Bitcoin security, Solana speed, and Ethereum functionality."
     }
   }
 }
