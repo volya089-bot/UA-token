@@ -1,0 +1,41 @@
+[workspace]
+members = ["programs/*"]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+ua_token_staking = "stakingUA1111111111111111111111111111111111"
+ua_token_governance = "govUA11111111111111111111111111111111111"
+
+[programs.devnet]
+ua_token_staking = "stakingUA1111111111111111111111111111111111"
+ua_token_governance = "govUA11111111111111111111111111111111111"
+
+[programs.mainnet]
+ua_token_staking = "stakingUA1111111111111111111111111111111111"
+ua_token_governance = "govUA11111111111111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[test]
+startup_wait = 5000
+shutdown_wait = 2000
+upgradeable = false
+
+[[test.genesis]]
+address = "98Xct31T42dmVRebSfLmoHdy2Mpr5zuNP36jBe9Z8yp7"
+program = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+
+[test.validator]
+url = "https://api.devnet.solana.com"
+commitment = "processed"
